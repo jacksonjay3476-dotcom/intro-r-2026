@@ -12,10 +12,55 @@ Anything outside of the R box won't run as code, and I don't have to put # to co
 typeof("a")
 # typeof() is a function. It has something to do with decimal points. Not sure if that will be relavant for me. 
 
+typeof("strings ")
+
+```
+How to create a vector:
+```{r}
+c(1,"two", 3) 
+# How to assign a vector to a df
+df <- c(1, "two", 3) 
+print(df)
+# This is an issue because this vector is a mix of data types. It is converting everything to characters. Characters are in quotations
 ```
 
+Lists: can hold multiple datatypes. You can see what the variables are in the environments tab. What I've been calling a df is probably a variable
 ```{r}
-print("Wednesday")
+
+my_list <- list(numbers = c(1,2,3), words = c("a","b","c"), mixed = list(TRUE,5))
+
+df <- data.frame(id = 1:3,
+                 mode = c("walk", "run", "drive"),
+                  distance = c(1,2,3))
+
 ```
+
+To commit, use the up arrow in Bash and do 'git add .'
+
+then 'git commit -m "Did some more stuff"'
+
+then 'git push origin main'
+
+
+
+```{r}
+
+csv_path <- "C:/Users/hwye08z/source-code/intro-r-2026/data/raw/presurvey_20260317.csv"
+survey_raw <- rio::import(csv_path)
+
+
+```
+
+
+```{r}
+
+csv_path <- "../data/raw/presurvey_20260317.csv"
+survey_raw <- rio::import(csv_path)
+
+
+```
+
+
+getwd()
 
 
