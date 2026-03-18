@@ -1,0 +1,21 @@
+---
+title: "PSU R Workshop"
+author: "Grayson Isbell"
+date: 2026-03-18
+format: html
+editor: visual
+---
+
+Anything outside of the R box won't run as code, and I don't have to put # to comment out of it 
+```{r}
+
+typeof("a")
+# typeof() is a function. It has something to do with decimal points. Not sure if that will be relavant for me. 
+
+```
+
+```{r}
+print("Wednesday")
+```
+
+
