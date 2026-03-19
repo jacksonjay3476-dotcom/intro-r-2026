@@ -35,9 +35,30 @@ library(summarytools)
 dfSummary(raw_15min)
 
 
+# Base R functions - no packages or libraries needed
+
+# If you don't know what column you want. Helpful when you have lists of lists
+raw_15min[2,] # Gives the second row
+raw_15min[ , 2] # Returns the second column
+
+mean(raw_15min$speed) # This will yield NA because there are NAs in the data
+hist(raw_15min$volume) # Click 'zoom' in the bottom right corner to turn the hist into a separate window
+
+# Filters
+
+# Pipe is unique to R
+# Can be %>%  or |> \\ %>%  is the old one. The shortcut is control, shift, m
+
+occ_20plus <- raw_15min |> filter(occupancy > 20)
+    # This says take the raw data, and |> means to take out. So take the raw data, and 
+    # take out that which has an occupancy greater than 20
 
 
-
+# If you want to filter multiple things out at once, put them both in the filter() function 
+    # and separate by an &
+occ10_sp80 <- raw_15min |> 
+    filter(occupancy < 10 & speed > 80)
+table(occ10_sp80$detector_id)
 
 
 
