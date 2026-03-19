@@ -61,10 +61,25 @@ occ10_sp80 <- raw_15min |>
 table(occ10_sp80$detector_id)
 
 
+# Working with NA's
+blank_example <- raw_15min |> filter(is.na(speed))
+# Asks each value for speed if it's an NA and returns all those that are a yes
 
+complete_df <- raw_15min |> filter(!is.na(speed))
+# Adding the ! does the opposite and returns everything where there's not an NA
 
+subset_o10s80 <- occ10_sp80 |> 
+                filter(detector_id %in% c(101185, 101176))
+#Also could do this:
 
+sub_det <- c(101185, 101176)
 
+subset2_o10s80 <- occ10_sp80 |> 
+        filter(detector_id %in% sub_det)
+
+# Save complete_df as an RDS. RDS compresses the file. This one is 550 kb but the main one was 3 kb
+
+saveRDS(complete_df, "data/clean_data.rds")
 
 
 
