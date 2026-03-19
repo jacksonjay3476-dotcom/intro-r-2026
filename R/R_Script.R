@@ -15,3 +15,4 @@ need <- pkgs[!pkgs %in% rownames(installed.packages())]
 if (length(need)) install.packages(need)
 
 invisible(lapply(pkgs, library, character.only = TRUE))
+??'tidycensus'

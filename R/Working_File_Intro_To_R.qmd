@@ -61,6 +61,25 @@ survey_raw <- rio::import(csv_path)
 ```
 
 
-getwd()
+To move the Bash terminal to the source code file:
+$ pwd
+That should take me here:
+
+/c/Users/hwye08z
+
+Then:
+cd source-code/
+
+Then:
+ls
+
+Which gives:
+intro-r-2026/
+
+Then do:
+cd intro-r-2026/
+
+And that should do it. Next time try:
+/c/Users/hwye08z/source-code/intro-r-2026/
 
 
